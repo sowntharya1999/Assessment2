@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="category-list.component.css">
+</head>
+<body class="gens" >
+    <h1 class="gel"> CATEGORY TABLE</h1>
+    <div class="generation">
+    <div class="table-responsive gen">
+    <table class="table table-bordered table-hover" id="Users">
+      <thead>
+          <tr>
+              <th>
+                 Id
+              </th>
+              <th>
+                  Weight
+              </th>
+              <th>
+                  Processor
+              </th>
+              <th>
+                  Ram
+              </th>
+              
+          </tr>
+      </thead>
+      <tbody><br>
+          <tr *ngFor="let category of categories">
+              <td>
+                  {{category.id}}
+              </td>
+              <td>
+                  {{category.Weight}}
+              </td>
+              <td>
+                  {{category.Processor}}
+              </td>
+              <td>
+                  {{category.Ram}}
+              </td>
+              
+             
+          </tr>
+    
+      </tbody>
+    </table>
+    </div>
+<div class="genes">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="txtId" placeholder="Id"
+            [(ngModel)]="txtId">
+    </div><br>
+    <div class="form-group">
+        <label>Weight</label>
+        <input type="number" class="form-control" id="txtweight" [(ngModel)]="txtweight">
+    </div><br>
+    <div class="form-group">
+        <label>Processor</label>
+        <input type="text" class="form-control" id="txtprocessor" [(ngModel)]="txtprocessor">
+    </div><br>
+    <div class="form-group">
+        <label>Ram</label>
+        <input type="text" class="form-control" id="txtram" [(ngModel)]="txtram">
+    </div>
+   <br>
+    <button type="submit" class="buttons" (click)="SaveCategory()">Submit</button>
+    <button type="submit" class="buttons" (click)="UpdateCategory()">Update</button>
+    <button type="submit" class="buttons" (click)="DeleteCategory()">Delete</button>
+</div>
+</div>
+</body>

@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="product-list.component.css">
+</head>
+<body class="generation">
+    <div class="table-responsive gen">
+        <table class="table table-bordered table-hover" id="Users">
+          <thead>
+              <tr>
+                  <th>
+                     Id
+                  </th>
+                  <th>
+                      Name
+                  </th>
+                  <th>
+                      Prize
+                  </th>
+                  <th>
+                      Country of origin 
+                  </th>
+                  <th>
+                      Category
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of products">
+                  <td>
+                      {{product.id}}
+                  </td>
+                  <td>
+                      {{product.P_Name}}
+                  </td>
+                  <td>
+                      {{product.Prize}}
+                  </td>
+                  <td>
+                      {{product.CountryOfOrigin}}
+                  </td>
+                  <td>
+                      {{product.Category}}
+                  </td>
+                 
+              </tr>
+        
+          </tbody>
+        </table>
+        </div>
+<div class="genes">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="txtId" placeholder="Id"
+            [(ngModel)]="txtId">
+    </div><br>
+    <div class="form-group">
+        <label> Name</label>
+        <input type="text" class="form-control" id="txtname" placeholder="Name" [(ngModel)]="txtname">
+    </div><br>
+    <div class="form-group">
+        <label>Prize</label>
+        <input type="number" class="form-control" id="txtprize" placeholder="Prize" [(ngModel)]="txtprize">
+    </div><br>
+    <div class="form-group">
+        <label>Country of Origin</label>
+        <input type="text" class="form-control" id="txtcountry" placeholder="Country of Origin" [(ngModel)]="txtcountry">
+    </div><br>
+    <div class="form-group">
+        <label>Category</label>
+        <input type="text" class="form-control" id="txtcategory" [(ngModel)]="txtcategory">
+    </div><br>
+    
+   <div>
+    <button type="submit" class="buttons" (click)="SaveProduct()">Submit</button>
+    <button type="submit" class="buttons" (click)="UpdateProduct()">Update</button>
+    <button type="submit" class="buttons" (click)="DeleteProduct()">Delete</button>
+    </div>
+</div>
+</body>

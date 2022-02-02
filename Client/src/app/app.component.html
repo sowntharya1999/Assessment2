@@ -1,0 +1,14 @@
+<mat-tab-group>
+    <mat-tab label="product" >
+        <!-- <mat-toolbar style="background-color: rgb(78, 69, 30);"> -->
+      <button style="font-size: 30px; color: rgb(0, 0, 0);" mat-button routerLink="product"  style="color: blue;" routerLinkActive="active">product</button></mat-tab>
+      <!-- <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button routerLink="product"  style="color: blue;" routerLinkActive="active" mat-menu-item>catogory</button>
+      </mat-menu> -->
+      <mat-tab label="categories"><button style="font-size: 30px; color: rgb(1, 17, 17);" mat-button routerLink="cato" style="color: blue;" routerLinkActive="active">Catogory</button></mat-tab>
+      <!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button routerLink="cato" style="color: blue;" routerLinkActive="active" mat-menu-item>catogory</button>
+      </mat-menu> -->
+    <!-- </mat-toolbar> -->
+</mat-tab-group>
+<router-outlet></router-outlet>
